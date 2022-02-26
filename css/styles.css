@@ -1,19 +1,73 @@
-* {
-    background-color: #ebf0f1;
+/* Global Colors ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+    --pale-yellow: #f8e9a1;
+    --bright-coral: #f76c6c;
+    --blue-darkgrey: rgb(71, 111, 144); 
+    --mintgreen: rgb(131, 216, 168);
+    --blue-lightgrey: rgb(79, 124, 160);
+    --babyblue: rgb(170, 210, 247);
+    --offwhite-text: rgb(235, 235, 235);
+    --dark-text: rgb(21, 23, 25);
+}
+/* Global Styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--dark-text);
+    background-color: white;
     font-family: sans-serif;
 }
-
 img {
-    width: 300px;
+    width: 480px;
 }
-
-h1 {
-    
+a:hover {
+    text-decoration: none;
 }
-
+a, a:visited {
+    color: var(--mintgreen);
+}
 h2 {
+    margin: 0;
+}
+.content-wrap {
+    width: 900px;
+    padding: 60px 0;
+    margin: 0 auto;
+}
+
+/* Profile ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+header {
+
+
+    background-color: var(--blue-darkgrey);
+    color: var(--offwhite-text);
+}
+/* Projects ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.section-projects {
 
 }
-.title-name {
-    
+.section-projects .btn-link {
+    color: var(--dark-text);
+    background-color: var(--mintgreen); 
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
+.section-projects .btn-link:hover {
+    background-color: rgba(131, 216, 168, .65);; 
+}
+/* Work Experience ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.section-work-experience {
+
+    background-color: var(--babyblue);
+}
+/* Education ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.section-education {
+
+}
+/* Contact Info ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+footer {
+    background-color: var(--blue-darkgrey);
+    color: var(--offwhite-text);
 }
