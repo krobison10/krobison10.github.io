@@ -7,18 +7,26 @@
     --blue-lightgrey: rgb(79, 124, 160);
     --babyblue: rgb(170, 210, 247);
     --offwhite-text: rgb(235, 235, 235);
-    --dark-text: rgb(21, 23, 25);
+    --dark-text: rgb(45, 66, 87);
 }
 /* Global Styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
     padding: 0;
     color: var(--dark-text);
     background-color: white;
-    font-family: sans-serif;
+    font-family: minion-3-display, serif;
+    font-size: 18px;
 }
 img {
-    width: 480px;
+    width: 400px;
 }
 a:hover {
     text-decoration: none;
@@ -26,41 +34,74 @@ a:hover {
 a, a:visited {
     color: var(--mintgreen);
 }
+h1 {
+    line-height: 1;
+    font-size: 4em;
+}
 h2 {
     margin: 0;
+    font-size: 2em;
 }
 .content-wrap {
-    width: 900px;
-    padding: 60px 0;
+    max-width: 900px;
+    width: 85%;
+    padding: 50px 0;
     margin: 0 auto;
 }
+p {
+    line-height: 1.5;
+}
+h3 {
+    margin-bottom: 0;
+}
+.item-details h3 + p {
+    font-style: italic;
+}
+.item-details h3 ~ p {
+    margin: 0;
+}
+.divider > section {
+    border-bottom: 1px dashed var(--dark-text);
+    padding: 25px 0;
+}
+.divider > section:last-of-type {
+    border-bottom: none;
+}
+
 
 /* Profile ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 header {
-
-
     background-color: var(--blue-darkgrey);
     color: var(--offwhite-text);
 }
 /* Projects ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.section-projects {
-
-}
 .section-projects .btn-link {
     color: var(--dark-text);
     background-color: var(--mintgreen); 
     text-decoration: none;
-    padding: 6px;
+    padding:  0 6px;
     border-radius: 4px;
     display: inline-block;
 }
 .section-projects .btn-link:hover {
     background-color: rgba(131, 216, 168, .65);; 
 }
+.section-projects .btn-link:active {
+    background-color: white;
+}
+.project-item {
+    overflow: hidden;
+}
+.project-item h3 {
+    margin-top: 0;
+    /* margin-bottom: .5; */
+    font-size: 1.5em;
+    
+}
 /* Work Experience ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .section-work-experience {
 
-    background-color: var(--babyblue);
+    background-color: var(--pale-yellow);
 }
 /* Education ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .section-education {
@@ -70,4 +111,37 @@ header {
 footer {
     background-color: var(--blue-darkgrey);
     color: var(--offwhite-text);
+}
+.contact-list {
+   padding-left: 0; 
+}
+.contact-list p {
+    margin: 5px;
+}
+
+/* Responsive ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media screen and (min-width:800px) {
+    header, footer {
+        text-align: center;
+    }
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+    .job-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+    }
+
+    .contact-list {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    
+    }
+    .contact-list p {
+        padding: 15px;
+        display: inline-block;
+    }
 }
