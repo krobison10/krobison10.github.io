@@ -103,6 +103,9 @@ header {
 
     background-color: var(--pale-yellow);
 }
+.section-work-experience li {
+    list-style-type: circle;
+}
 /* Education ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .section-education {
 
